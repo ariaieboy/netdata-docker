@@ -4,8 +4,8 @@ DEBIAN_FRONTEND=noninteractive
 
 # some mirrors have issues, i skipped httpredir in favor of an eu mirror
 
-echo "deb http://ftp.nl.debian.org/debian/ stretch main" > /etc/apt/sources.list
-echo "deb http://security.debian.org/debian-security stretch/updates main" >> /etc/apt/sources.list
+echo "deb http://ftp.nl.debian.org/debian/ bookworm main" > /etc/apt/sources.list
+echo "deb http://security.debian.org/debian-security bookworm/updates main" >> /etc/apt/sources.list
 
 # install dependencies for build
 # source: https://learn.netdata.cloud/docs/agent/packaging/installer/methods/manual
