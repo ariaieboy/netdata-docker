@@ -8,7 +8,7 @@ apt-get -qq update
 apt-get -y install curl git
 curl -Ss 'https://raw.githubusercontent.com/netdata/netdata/master/packaging/installer/install-required-packages.sh' >/tmp/install-required-packages.sh
 chmod +x ./tmp/install-required-packages.sh
-./tmp/install-required-packages.sh -i netdata-all
+./tmp/install-required-packages.sh -y -i netdata-all
 
 # fetch netdata
 
