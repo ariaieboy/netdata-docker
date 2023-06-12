@@ -4,7 +4,8 @@ DEBIAN_FRONTEND=noninteractive
 
 # install dependencies for build
 # source: https://learn.netdata.cloud/docs/agent/packaging/installer/methods/manual
-
+apt-get -qq update
+apt-get -y curl git
 curl -Ss 'https://raw.githubusercontent.com/netdata/netdata/master/packaging/installer/install-required-packages.sh' >/tmp/install-required-packages.sh && bash /tmp/install-required-packages.sh -i netdata-all
 
 # fetch netdata
