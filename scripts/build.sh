@@ -5,14 +5,11 @@ DEBIAN_FRONTEND=noninteractive
 # install dependencies for build
 # source: https://learn.netdata.cloud/docs/agent/packaging/installer/methods/manual
 
-apt-get -qq update
-apt-get -y install zlib1g-dev uuid-dev libmnl-dev gcc make curl git autoconf autogen automake pkg-config netcat-openbsd jq libuv1-dev liblz4-dev libjudy-dev libssl-dev cmake libelf-dev libprotobuf-dev protobuf-compiler g++
-apt-get -y install autoconf-archive lm-sensors nodejs python python-mysqldb python-yaml libjudydebian1 libuv1 liblz4-1 openssl
-apt-get -y install msmtp msmtp-mta apcupsd fping
+curl -Ss 'https://raw.githubusercontent.com/netdata/netdata/master/packaging/installer/install-required-packages.sh' >/tmp/install-required-packages.sh && bash /tmp/install-required-packages.sh -i netdata-all
 
 # fetch netdata
 
-git clone https://github.com/firehol/netdata.git /netdata.git
+git clone --depth=100 --recursive https://github.com/firehol/netdata.git /netdata.git
 cd /netdata.git
 TAG=$(</git-tag)
 if [ ! -z "$TAG" ]; then
