@@ -6,6 +6,7 @@ on:
     push:
         branches:
             - master
+            - my_image
 
 jobs:
     build-publish-docker-hub:
