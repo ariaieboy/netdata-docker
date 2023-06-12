@@ -1,6 +1,6 @@
 #!/bin/sh
 
-MY_IMAGE_NAME="caprover/netdata"
+MY_IMAGE_NAME="ariaieboy/netdata"
 NETDATA_VERSION="v1.39.1"
 
 # ensure you're not running it on local machine
