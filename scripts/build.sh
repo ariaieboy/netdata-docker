@@ -12,7 +12,7 @@ chmod +x ./tmp/install-required-packages.sh
 
 # fetch netdata
 
-git clone --depth=100 --recursive https://github.com/firehol/netdata.git /netdata.git
+git clone https://github.com/firehol/netdata.git /netdata.git
 cd /netdata.git
 TAG=$(</git-tag)
 if [ ! -z "$TAG" ]; then
